@@ -1,78 +1,33 @@
 class Triangle
-  # write code here
-  
-  def initialize(side_1, side_2, side_3)
-    @triangle << side_1
-    @triangle << side_2
-    @triangle << side_3 
-    @triangle = []
-  end
+  attr_accessor :s_1, :s_2, :s_3
 
-
-  def valid?
-    sum_one_two = @triangle[0] + @triangle[1]
-    sum_one_three = @triangle[0] + @triangle[2]
-    sum_two_three = @triangle[1] + @triangle[2]
-
-    if (@triangle.none? {|side| side <= 0}) &&
-      (sum_one_two > @triangle[2] && sum_one_three > @triangle[1] && sum_two_three > @triangle[0])
-       true
-    else
-       false
+    def initialize(s_1, s_2, s_3)
+      @s_1 = s_1
+      @s_2 = s_2
+      @s_3 = s_3
     end
-  end
 
   def kind
-    if valid?
-      if @triangle.uniq.length == 1
-        :equilateral
-       elsif @triangle.uniq.length == 2
-        :isosceles
-      else
-        :scalene
-      end
-      else
-        raise TriangleError
-      end
+    restriction = (@s_1 > 0),
+                  (@s_2 > 0),
+                  (@s_3 > 0),
+                  (@s_1  + @s_2 > @s_3),
+                  (@s_1  + @s_3 > @s_2),
+                  (@s_3 + @s_2 > @s_1)
+
+    if restriction.include?(false)
+      raise TriangleError
     end
-   
-class TriangleError < StandardError
 
+    if @s_1 == @s_2 && @s_2 == @s_3
+      :equilateral
+    elsif @s_1 == @s_2 || @s_1 == @s_3 || @s_2 == @s_3
+      :isosceles
+    else
+      :scalene
+    end
+  end
+
+  class TriangleError < StandardError
+  end
 end
-
-end
-
-
-
-
-#   def valid?
-#     sum_one_two = @triangle_sides[0] + @triangle_sides[1]
-#     sum_one_three = @triangle_sides[0] + @triangle_sides[2]
-#     sum_two_three = @triangle_sides[1] + @triangle_sides[2]
-
-#     if (@triangle_sides.none? {|side| side <= 0}) &&
-#       (sum_one_two > @triangle_sides[2] && sum_one_three > @triangle_sides[1] && sum_two_three > @triangle_sides[0])
-#       return true
-#     else
-#       return false
-#     end
-#   end
-
-#   def kind
-#     if valid?
-#       if @triangle_sides.uniq.length == 1
-#         return :equilateral
-#       elsif @triangle_sides.uniq.length == 2
-#         return :isosceles
-#       else
-#         return :scalene
-#       end
-#     else
-#       raise TriangleError
-#     end
-#   end
-# end
-
-# class TriangleError < StandardError
-
-# end
