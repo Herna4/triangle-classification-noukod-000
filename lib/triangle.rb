@@ -8,27 +8,19 @@ class Triangle
       @side_3 = side_3
     end
 
-  def kind
-    restriction = (@s_1 > 0),
-                  (@s_2 > 0),
-                  (@s_3 > 0),
-                  (@s_1  + @s_2 > @s_3),
-                  (@s_1  + @s_3 > @s_2),
-                  (@s_3 + @s_2 > @s_1)
+   def valid?
+    sum_one_two = @triangle_sides[0] + @triangle_sides[1]
+    sum_one_three = @triangle_sides[0] + @triangle_sides[2]
+    sum_two_three = @triangle_sides[1] + @triangle_sides[2]
 
-    if restriction.include?(false)
-      raise TriangleError
-    end
-
-    if @s_1 == @s_2 && @s_2 == @s_3
-      :equilateral
-    elsif @s_1 == @s_2 || @s_1 == @s_3 || @s_2 == @s_3
-      :isosceles
+    if (@triangle_sides.none? {|side| side <= 0}) &&
+      (sum_one_two > @triangle_sides[2] && sum_one_three > @triangle_sides[1] && sum_two_three > @triangle_sides[0])
+      return true
     else
-      :scalene
+      return false
     end
   end
-  
+
   def kind
     if valid?
       if @triangle_sides.uniq.length == 1
@@ -42,7 +34,8 @@ class Triangle
       raise TriangleError
     end
   end
+end
 
-  class TriangleError < StandardError
-  end
+class TriangleError < StandardError
+
 end
