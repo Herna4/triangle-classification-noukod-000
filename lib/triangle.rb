@@ -1,4 +1,4 @@
 class Triangle
   # write code here
-  def initialize()
+  def initialize(equilateral:, isosceles:, scalene:)
 end
