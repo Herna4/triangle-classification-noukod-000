@@ -18,7 +18,7 @@ class Triangle
         :equilateral
       elsif (@triangle_sides_1 == @triangle_sides_2) || (@triangle_sides_2 == @triangle_sides_3) || (@triangle_sides_1 == @triangle_sides_3)
         :isosceles
-      elsif (@triangle_sides_1 != @triangle_sides_2) && (@triangle_sides_2 != @triangle_sides_3) && (@side_1 != @side_3)
+      elsif (@triangle_sides_1 != @triangle_sides_2) && (@triangle_sides_2 != @triangle_sides_3) && (@triangle_sides_1 != @side_3)
         :scalene
       end
     end
