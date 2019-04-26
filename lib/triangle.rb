@@ -1,11 +1,11 @@
 class Triangle
   
-  attr_accessor :side_1, :side_2, :side_3
+  attr_accessor :triangle_sides_1, :triangle_sides_2, :side_3
 
-    def initialize(side_1, side_2, side_3)
-      @side_1 = side_1
-      @side_2 = side_2
-      @side_3 = side_3
+    def initialize(triangle_sides_1, triangle_sides_2, triangle_sides_3)
+      @triangle_sides_1 = triangle_sides_1
+      @triangle_sides_2 = triangle_sides_2
+      @triangle_sides_3 = triangle_sides_3
     end
 
    def valid?
