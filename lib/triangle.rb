@@ -2,11 +2,11 @@ class Triangle
   
   attr_accessor :triangle_sides_1, :triangle_sides_2, :triangle_sides_3
 
-    def initialize(triangle_sides_1, triangle_sides_2, triangle_sides_3)
+  def initialize(triangle_sides_1, triangle_sides_2, triangle_sides_3)
       @triangle_sides_1 = triangle_sides_1
       @triangle_sides_2 = triangle_sides_2
       @triangle_sides_3 = triangle_sides_3
-    end
+  end
 
   def kind()
     if (@triangle_sides_1 <= 0) || (@triangle_sides_2 <= 0) || (@triangle_sides_3 <= 0)
