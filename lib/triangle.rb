@@ -7,9 +7,6 @@ class Triangle
     @triangle << side_3 
     @triangle = []
   end
- 
-  
-end
 
 
   def valid?
@@ -24,7 +21,7 @@ end
        false
     end
   end
-
+end
 #   def kind
 #     if valid?
 #       if @triangle_sides.uniq.length == 1
