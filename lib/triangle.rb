@@ -2,9 +2,9 @@ class Triangle
   # write code here
   
   def initialize(side_1, side_2, side_3)
-    @equilateral = equilateral 
-    @isosceles = isosceles 
-    @scalene = scalene
+    @equilateral = side_1 
+    @isosceles = side_2 
+    @scalene = side_3
   end
   
   def kind 
