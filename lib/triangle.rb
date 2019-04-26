@@ -5,7 +5,6 @@ class Triangle
     @equilateral = equilateral 
     @isosceles = isosceles 
     @scalene = scalene
-    @kind
   end
   
 end
