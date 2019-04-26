@@ -1,26 +1,19 @@
 class Triangle
   # write code here
   
-#   def initialize(side_1, side_2, side_3)
-#     @triangle = []
-#     @triangle << side_1
-#     @triangle << side_2
-#     @triangle << side_3 
+  def initialize(side_1, side_2, side_3)
+    @triangle = []
+    @triangle << side_1
+    @triangle << side_2
+    @triangle << side_3 
     
-#   end
+  end
  
-#   def kind 
-#   end
-  
-# end
-def initialize(side_1, side_2, side_3)
-    @triangle_sides = []
-    @triangle_sides << side_1
-    @triangle_sides << side_2
-    @triangle_sides << side_3
+  def kind 
   end
   
 end
+
 
 #   def valid?
 #     sum_one_two = @triangle_sides[0] + @triangle_sides[1]
