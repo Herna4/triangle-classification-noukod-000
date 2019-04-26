@@ -1,18 +1,18 @@
 class Triangle
   # write code here
   
-   def initialize(side_1, side_2, side_3)
-     @triangle = []
-    @triangle << side_1
-    @triangle << side_2
-    @triangle << side_3 
+#   def initialize(side_1, side_2, side_3)
+#     @triangle = []
+#     @triangle << side_1
+#     @triangle << side_2
+#     @triangle << side_3 
     
-   end
+#   end
  
-  def kind 
-  end
+#   def kind 
+#   end
   
-end
+# end
 def initialize(side_1, side_2, side_3)
     @triangle_sides = []
     @triangle_sides << side_1
