@@ -23,7 +23,7 @@ class Triangle
   end
 end
   def kind
-    if valid@
+    if valid?
       if @triangle.uniq.length == 1
         :equilateral
        elsif @triangle.uniq.length == 2
