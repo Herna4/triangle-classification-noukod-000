@@ -5,7 +5,7 @@ class Triangle
     @equilateral = side_1 
     @isosceles = side_2 
     @scalene = side_3
-    triangle = []
+    @triangle = []
   end
   @triangle_sides = []
     @triangle_sides << side_1
