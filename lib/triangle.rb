@@ -6,11 +6,8 @@ class Triangle
     @triangle << side_1
     @triangle << side_2
     @triangle << side_3 
-    
   end
  
-  def kind 
-  end
   
 end
 
