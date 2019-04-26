@@ -23,6 +23,8 @@ class Triangle
   end
 end
   def kind
+    if valid@
+      if @triangle.uniq.length == 1
     if valid?
       if @triangle_sides.uniq.length == 1
         return :equilateral
