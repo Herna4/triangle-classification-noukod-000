@@ -26,6 +26,7 @@ end
     if valid@
       if @triangle.uniq.length == 1
         :equilateral
+       elsif @triangle.uniq.length == 2
     if valid?
       if @triangle_sides.uniq.length == 1
         return :equilateral
