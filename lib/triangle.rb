@@ -30,6 +30,9 @@ end
         :isosceles
       else
         :scalene
+      else
+        else
+      raise TriangleError
       end
     end
     if valid?
