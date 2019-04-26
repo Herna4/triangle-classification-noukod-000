@@ -27,7 +27,11 @@ end
       if @triangle.uniq.length == 1
         :equilateral
        elsif @triangle.uniq.length == 2
-       :isosceles
+        :isosceles
+      else
+        :scalene
+      end
+    end
     if valid?
       if @triangle_sides.uniq.length == 1
         return :equilateral
