@@ -21,7 +21,7 @@ class Triangle
        false
     end
   end
-end
+d
   def kind
     if valid?
       if @triangle.uniq.length == 1
