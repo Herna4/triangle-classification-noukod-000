@@ -19,6 +19,8 @@ def initialize(side_1, side_2, side_3)
     @triangle_sides << side_2
     @triangle_sides << side_3
   end
+  
+end
 
 #   def valid?
 #     sum_one_two = @triangle_sides[0] + @triangle_sides[1]
