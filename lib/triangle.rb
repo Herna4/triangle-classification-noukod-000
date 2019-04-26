@@ -5,7 +5,7 @@ class Triangle
     @triangle_sides = []
     @triangle_sides << side_1
     @triangle_sides << side_2
-  end
+   end
  
   def kind 
   end
